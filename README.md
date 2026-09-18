@@ -40,10 +40,13 @@ A aplicação deverá oferecer as seguintes funcionalidades:
 
 Permitir o cadastro de um novo cliente contendo:
 
-- Nome completo;
-- Telefone;
-- E-mail;
-- Endereço.
+- Nome completo
+- CPF/CNPJ
+- Data de nascimento
+- Sexo
+- Telefones
+- E-mail
+- CEP
 
 ## RF02 – Listar Clientes
 
@@ -72,14 +75,12 @@ controles manuais por uma aplicação web simples e eficiente.
 
 ## Divisão das Atividades
 
-| Integrante                     | Responsabilidade                                        |
-|--------------------------------|---------------------------------------------------------|
-| Guilherme Matte                | Levantamento dos requisitos e documentação.             |
-| Guilherme Matte, Anne Caroline | Desenvolvimento das telas da aplicação (HTML e CSS).    |
-| Jessica, Renato                | Desenvolvimento das funcionalidades (JavaScript e PHP). |
-| Lucas Randon, Jose Lucas       | Banco de dados, testes e revisão da aplicação.          |
-
-> **Observação:** Caso o projeto seja individual, o responsável realizará todas as etapas do desenvolvimento.
+| Integrante                  | Responsabilidade                                           |
+|-----------------------------|------------------------------------------------------------|
+| Guilherme Matte             | Levantamento dos requisitos e documentação.                |
+| Lucas Randon, Anne Caroline | Desenvolvimento das telas da aplicação (HTML e CSS).       |
+| Jessica,Guilherme Matte     | Desenvolvimento das funcionalidades (JavaScript e Python). |
+| Renato, Jose Lucas          | Banco de dados, testes e revisão da aplicação.             |
 
 ## Cronograma de Desenvolvimento
 
@@ -95,28 +96,6 @@ controles manuais por uma aplicação web simples e eficiente.
 - **HTML5** – Estrutura das páginas da aplicação.
 - **CSS3** – Estilização da interface.
 - **JavaScript** – Interatividade e funcionalidades do lado do cliente.
-- **PHP** – Desenvolvimento da lógica da aplicação no servidor.
+- **Python** – Desenvolvimento da lógica da aplicação no servidor.
 - **MySQL** – Armazenamento dos dados dos clientes.
 
----
-
-# 5. Entregáveis da Primeira Etapa
-
-A apresentação em PDF deverá conter:
-
-- Tema escolhido: **Sistema de Cadastro de Clientes**.
-- Descrição do problema.
-- Público-alvo.
-- Objetivo da aplicação.
-- Requisitos funcionais previstos.
-- Planejamento das atividades.
-- Cronograma de desenvolvimento.
-- Tecnologias utilizadas.
-
----
-
-# Conclusão
-
-O **Sistema de Cadastro de Clientes** tem como objetivo facilitar o gerenciamento das informações de clientes por meio
-de uma aplicação web simples, organizada e intuitiva. A solução permitirá manter os cadastros atualizados, facilitar
-consultas e reduzir o uso de controles manuais, contribuindo para uma melhor organização do negócio.
