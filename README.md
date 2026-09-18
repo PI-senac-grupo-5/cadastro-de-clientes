@@ -1,103 +1,122 @@
-1 - Cadastro de clientes
+# Projeto Integrador – Primeira Etapa
 
-PROJETO INTEGRADOR
-PRIMEIRA ETAPA: PLANEJAMENTO DA APLICAÇÃO
+## Tema Escolhido
 
-Projeto Integrador – Primeira Etapa
-Tema Escolhido
-
-Sistema de Cadastro de Clientes
+### Sistema de Cadastro de Clientes
 
 Uma aplicação web para realizar o cadastro e o gerenciamento de clientes de forma simples e organizada.
 
-2. Definição da Proposta
-   Problema que será resolvido
+---
 
-Muitos pequenos comércios e prestadores de serviço ainda controlam as informações dos clientes em papel ou planilhas.
-Isso dificulta a organização, a busca de informações e a atualização dos dados.
+# 2. Definição da Proposta
 
-Público-alvo
+## Problema que será resolvido
 
-Pequenos comerciantes, prestadores de serviço e empresas que precisam manter um cadastro organizado de seus clientes.
+Muitos pequenos comércios e prestadores de serviço ainda controlam as informações dos clientes em papel, cadernos ou
+planilhas. Esse processo dificulta a organização dos dados, a busca por informações e a atualização dos cadastros,
+podendo gerar perda de informações e retrabalho.
 
-Objetivo da aplicação
+## Público-alvo
 
-Desenvolver uma aplicação web que permita cadastrar, consultar, editar e excluir clientes, facilitando o gerenciamento
-das informações de forma rápida e segura.
+A aplicação será destinada a:
 
-3. Requisitos Funcionais
+- Pequenos comerciantes;
+- Prestadores de serviço;
+- Micro e pequenas empresas;
+- Profissionais autônomos que precisam manter um cadastro organizado de seus clientes.
+
+## Objetivo da Aplicação
+
+Desenvolver uma aplicação web que permita cadastrar, consultar, editar e excluir clientes de forma simples e rápida,
+facilitando o gerenciamento das informações e tornando o atendimento mais organizado.
+
+---
+
+# 3. Levantamento dos Requisitos Funcionais
 
 A aplicação deverá oferecer as seguintes funcionalidades:
 
-Requisito
+## RF01 – Cadastrar Cliente
 
-Descrição
+Permitir o cadastro de um novo cliente contendo:
 
-RF01
+- Nome completo;
+- Telefone;
+- E-mail;
+- Endereço.
 
-Cadastrar um novo cliente com nome, telefone, e-mail e endereço.
+## RF02 – Listar Clientes
 
-RF02
+Exibir todos os clientes cadastrados em uma lista ou tabela para facilitar a visualização.
 
-Listar todos os clientes cadastrados.
+## RF03 – Pesquisar Cliente
 
-RF03
+Permitir localizar clientes por nome ou telefone, agilizando a busca por um cadastro específico.
 
-Pesquisar clientes pelo nome ou telefone.
+## RF04 – Editar Cadastro
 
-RF04
+Permitir alterar as informações de um cliente já cadastrado sempre que necessário.
 
-Editar as informações de um cliente já cadastrado.
+## RF05 – Excluir Cliente
 
-RF05
+Permitir remover um cliente do sistema quando o cadastro não for mais necessário.
 
-Excluir um cliente do sistema.
+### Como os requisitos resolvem o problema
 
-Essas funcionalidades permitem organizar e manter os dados dos clientes sempre atualizados.
+Essas funcionalidades permitem que o usuário mantenha um cadastro organizado, atualizado e de fácil acesso, substituindo
+controles manuais por uma aplicação web simples e eficiente.
 
-4. Planejamento do Projeto
-   Divisão das atividades
+---
 
-Integrante
+# 4. Planejamento do Projeto
 
-Responsabilidade
+## Divisão das Atividades
 
-Integrante 1
+| Integrante                     | Responsabilidade                                        |
+|--------------------------------|---------------------------------------------------------|
+| Guilherme Matte                | Levantamento dos requisitos e documentação.             |
+| Guilherme Matte, Anne Caroline | Desenvolvimento das telas da aplicação (HTML e CSS).    |
+| Jessica, Renato                | Desenvolvimento das funcionalidades (JavaScript e PHP). |
+| Lucas Randon, Jose Lucas       | Banco de dados, testes e revisão da aplicação.          |
 
-Levantamento dos requisitos e documentação.
+> **Observação:** Caso o projeto seja individual, o responsável realizará todas as etapas do desenvolvimento.
 
-Integrante 2
+## Cronograma de Desenvolvimento
 
-Desenvolvimento das telas (HTML/CSS).
+| Semana   | Atividade                                                   |
+|----------|-------------------------------------------------------------|
+| Semana 1 | Planejamento do projeto e levantamento dos requisitos.      |
+| Semana 2 | Desenvolvimento da interface e modelagem do banco de dados. |
+| Semana 3 | Implementação das funcionalidades da aplicação.             |
+| Semana 4 | Testes, correções e preparação da apresentação final.       |
 
-Integrante 3
+## Tecnologias Utilizadas
 
-Desenvolvimento das funcionalidades (JavaScript/PHP).
+- **HTML5** – Estrutura das páginas da aplicação.
+- **CSS3** – Estilização da interface.
+- **JavaScript** – Interatividade e funcionalidades do lado do cliente.
+- **PHP** – Desenvolvimento da lógica da aplicação no servidor.
+- **MySQL** – Armazenamento dos dados dos clientes.
 
-Integrante 4
+---
 
-Banco de dados, testes e revisão da aplicação.
+# 5. Entregáveis da Primeira Etapa
 
-Se o trabalho for individual, basta trocar por "Responsável por todas as etapas do desenvolvimento".
+A apresentação em PDF deverá conter:
 
-Cronograma
+- Tema escolhido: **Sistema de Cadastro de Clientes**.
+- Descrição do problema.
+- Público-alvo.
+- Objetivo da aplicação.
+- Requisitos funcionais previstos.
+- Planejamento das atividades.
+- Cronograma de desenvolvimento.
+- Tecnologias utilizadas.
 
-Semana
+---
 
-Atividade
+# Conclusão
 
-Semana 1 Planejamento, definição do tema e levantamento dos requisitos.
-Semana 2 Criação das telas e modelagem do banco de dados.
-Semana 3 Desenvolvimento das funcionalidades do sistema.
-Semana 4 Testes, correções e preparação da apresentação final.
-Tecnologias Utilizadas
-
-HTML5 – Estrutura da aplicação.
-
-CSS3 – Estilização da interface.
-
-JavaScript – Funcionalidades da aplicação.
-
-PHP – Processamento das informações no servidor.
-
-MySQL – Armazenamento dos dados dos clientes.
+O **Sistema de Cadastro de Clientes** tem como objetivo facilitar o gerenciamento das informações de clientes por meio
+de uma aplicação web simples, organizada e intuitiva. A solução permitirá manter os cadastros atualizados, facilitar
+consultas e reduzir o uso de controles manuais, contribuindo para uma melhor organização do negócio.
