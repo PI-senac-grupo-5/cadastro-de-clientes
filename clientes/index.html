@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Clientes Cadastrados</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Cadastro de Clientes/index.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="navegacao">
+    <div class="conteudo navegacao-interno">
+      <span class="navegacao-marca">Cadastro de Clientes</span>
+      <nav class="navegacao-links">
+    <a href="../Cadastro de Clientes/index.html">Novo Cadastro</a>
+</nav>
+    </div>
+  </header>
+
+  <main class="conteudo principal">
+    <section class="cartao" id="clientes">
+      <p class="sobretitulo sobretitulo-escuro"><span class="pulso"></span>Consulta de Clientes</p>
+      <h2 class="titulo">Clientes Cadastrados</h2>
+
+      <input
+    class="campo-pesquisa"
+    type="text"
+    placeholder="Pesquisar por nome ou telefone">
+
+<table class="tabela-clientes">
+
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Maria Silva</td>
+            <td>123.456.789-00</td>
+            <td>(13) 99999-9999</td>
+            <td>maria@email.com</td>
+            <td class="acoes-tabela">
+                <button class="botao-editar">Editar</button>
+                <button class="botao-excluir">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+    </section>
+  </main>
+
+  <script src="clientes.js"></script>

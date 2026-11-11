@@ -1,0 +1,60 @@
+/* Pesquisa */
+
+.campo-pesquisa {
+    margin: 24px 0;
+}
+
+
+/* Tabela */
+
+.tabela-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.tabela-clientes th {
+    text-align: left;
+    padding: 16px;
+    background-color: var(--cor-carvao);
+    color: var(--cor-osso);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tabela-clientes td {
+    padding: 16px;
+    border-bottom: 1px solid var(--cor-pedra);
+}
+
+.tabela-clientes tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+
+/* Ações */
+
+.acoes-tabela {
+    display: flex;
+    gap: 8px;
+}
+
+.botao-editar,
+.botao-excluir {
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--raio-pequeno);
+    cursor: pointer;
+    font-family: var(--fonte-geist);
+    font-size: 14px;
+}
+
+.botao-editar {
+    background: #2563eb;
+    color: white;
+}
+
+.botao-excluir {
+    background: #dc2626;
+    color: white;
+}
