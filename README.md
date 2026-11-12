@@ -97,5 +97,5 @@ controles manuais por uma aplicação web simples e eficiente.
 - **CSS3** – Estilização da interface.
 - **JavaScript** – Interatividade e funcionalidades do lado do cliente.
 - **Python** – Desenvolvimento da lógica da aplicação no servidor.
-- **MySQL** – Armazenamento dos dados dos clientes.
+- **MongoDB** – Armazenamento dos dados dos clientes.
 
