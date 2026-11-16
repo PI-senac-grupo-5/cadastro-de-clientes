@@ -1,3 +1,4 @@
+from entities.cliente import Cliente
 from flask import Blueprint, jsonify, request
 
 from services import clientes_service
@@ -23,3 +24,13 @@ def listar_todos_clientes():
     )
 
     return jsonify({"clientes": clientes}), 200
+
+@router.post("")
+def cadastrar_cliente():
+    # body json da requisição
+    body = request.get_json(silent=True) or {}
+    cliente = clientes_service.cadastrar_cliente(Cliente(**body))
+    
+
+
+    return jsonify({"cliente": cliente,"mensagem":"cliente cadastrado com sucesso"}), 201

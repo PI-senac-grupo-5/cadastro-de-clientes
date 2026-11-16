@@ -94,3 +94,6 @@ def filtrar_clientes(telefone: str = None, nome_completo: str = None):
         if (not telefone or telefone in cliente.telefone)
            and (not nome_completo or nome_completo.lower() in cliente.nome_completo.lower())
     ]
+
+def cadastrar_cliente (cliente:Cliente):
+    return cliente  
