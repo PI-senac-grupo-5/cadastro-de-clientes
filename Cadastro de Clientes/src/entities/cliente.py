@@ -8,6 +8,7 @@ class Cliente:
     email: str
     data_nasc: str
     telefone: str
+    sexo: str
     cep: str
     cpf: str = ""
     cnpj: str = ""

@@ -1,5 +1,6 @@
 from typing import List
 
+from database import mongodb
 from entities.cliente import Cliente
 
 
@@ -73,7 +74,7 @@ def __mockar_cliente():
     ]
 
 
-def filtrar_clientes(telefone: str = None, nome_completo: str = None):
+def filtrar_clientes(filter):
     """
     Filtra os clientes com base no telefone e/ou nome completo.
 
@@ -83,17 +84,31 @@ def filtrar_clientes(telefone: str = None, nome_completo: str = None):
 
     Caso nenhum filtro seja informado, retorna todos os clientes cadastrados.
 
-    :param telefone: Trecho do telefone utilizado para filtrar os clientes (opcional).
-    :param nome_completo: Trecho do nome completo utilizado para filtrar os clientes (opcional).
+    :param filter: Trecho do telefone ou nome completo utilizado para filtrar os clientes (opcional).
     :return: Lista de clientes que correspondem aos filtros ou todos os clientes caso nenhum filtro seja informado.
     """
 
-    clientes: List[Cliente] = __mockar_cliente()
-    return [
-        cliente for cliente in clientes
-        if (not telefone or telefone in cliente.telefone)
-           and (not nome_completo or nome_completo.lower() in cliente.nome_completo.lower())
-    ]
+    clientes: List[Cliente] = mongodb.find(filter_value=filter)
+    if len(clientes) == 0:
+        print(f"Nenhum cliente encontrado para o filtro informado: {filter}")
+    return clientes
 
-def cadastrar_cliente (cliente:Cliente):
-    return cliente  
+
+def cadastrar_cliente(cliente: Cliente):
+    mongodb.save(cliente)
+    return cliente.id
+
+
+def atualizar_cliente(cliente: Cliente):
+    id = cliente.id
+
+    if not id:
+        raise ValueError("Id do cliente não informado")
+    mongodb.update(id, cliente)
+    return id
+
+
+def deletar_cliente(cliente_id):
+    if not cliente_id:
+        raise ValueError("Id do cliente não informado")
+    mongodb.delete(cliente_id)
