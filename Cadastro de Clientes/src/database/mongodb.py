@@ -32,72 +32,66 @@ Observação:
     continuará com o próximo registro.
 """
 
-from pymongo import MongoClient
-from dataclasses import asdict
 from bson import ObjectId
-from src.entities.cliente import Cliente
+from pymongo import MongoClient
 
+from src.entities.cliente import Cliente
 
 # Conexão com MongoDB
 client = MongoClient("mongodb://localhost:27017/")
 
 database = client["cadastro_clientes"]
 
-clientes = database["clientes"]
+db = database["clientes"]
 
-def save(cliente):
-    dados = asdict(cliente)
-    dados.pop("id", None)
 
-    resultado = clientes.insert_one(dados)
+def save(customer: Cliente):
+    data = customer.to_dict()
+    data.pop("id", None)
 
-    cliente.id = str(resultado.inserted_id)
-    
+    result = db.insert_one(data)
+
+    customer.id = str(result.inserted_id)
+
+
 def delete(_id):
-    clientes.delete_one({
+    db.delete_one({
         "_id": ObjectId(_id)
     })
-    
-def update(_id, cliente):
-    dados = asdict(cliente)
-    dados.pop("id", None)
 
-    clientes.update_one(
+
+def update(_id, customer: Cliente):
+    data = customer.to_dict()
+    data.pop("id", None)
+
+    db.update_one(
         {"_id": ObjectId(_id)},
-        {"$set": dados}
+        {"$set": data}
     )
 
-def find_all():
-    lista_clientes = []
-    
-    for registro in clientes.find():
-        try:
-            registro["id"] = str(registro.pop("_id"))
-            cliente = Cliente(**registro)
-            lista_clientes.append(cliente)
-        
-        except ValueError:
-            continue
-    
-    return lista_clientes
 
-def find_cliente(filtro):
-    lista_clientes = []
-    
-    registros = clientes.find({
-        "$or": [
-            {"nome_completo": {"$regex": filtro, "$options": "i"}},
-            {"telefone": {"$regex": filtro, "$options": "i"}}
-        ]
-    })
-    
-    for registro in registros:
+def find(filter_value: str = None):
+    customers = []
+
+    if filter_value:
+        filter = {
+            "$or": [
+                {"nome_completo": {"$regex": filter_value, "$options": "i"}},
+                {"telefone": {"$regex": filter_value, "$options": "i"}}
+            ]
+        }
+    else:
+        filter = {}
+
+    docs = db.find(filter)
+
+    for doc in docs:
         try:
-            registro["id"] = str(registro.pop("_id"))
-            cliente = Cliente(**registro)
-            lista_clientes.append(cliente)
-        
+            doc["id"] = str(doc.pop("_id"))
+            customer = Cliente(**doc)
+            customers.append(customer)
+
         except ValueError:
             continue
-    
-    return lista_clientes
+
+    return customers
