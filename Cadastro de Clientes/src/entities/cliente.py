@@ -18,3 +18,6 @@ class Cliente:
         if self.cpf == "" and self.cnpj == "":
             print("campos 'cnpj' ou 'cpf' não preenchidos")
             raise ValueError("Erro na validação do cliente")
+
+    def to_dict(self):
+        return self.__dict__
